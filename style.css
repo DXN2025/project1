@@ -1,0 +1,1398 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Noto+Sans+JP:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Noto+Sans+JP:wght@100..900&display=swap');
+
+:root{
+
+    --main-color:rgb(170, 17, 17);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: cairo;
+    direction: rtl;
+}
+
+ul{
+
+    list-style: none;
+}
+
+.container {
+
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+/* Small */
+@media (max-width:768px){
+
+    .container{
+        width: 100%;
+    }
+}
+
+/* Medium */
+@media (min-width:768px) and (max-width:991px){
+
+    .container{
+        width: 750px;
+    }
+}
+
+/* Large */
+@media (min-width:992px) and (max-width:1199px){
+
+    .container{
+        width: 970px;
+    }
+}
+
+/* Extra Large  */
+@media (min-width:1200px){
+
+    .container{
+        width: 1170px;
+    }
+}
+
+/* start Headwe style */
+ header{
+
+    background-color: white;
+     height: 90px;
+    border: 1px solid rgb(231, 169, 169); 
+    position: static;
+    top: 0;
+    z-index: 1000;
+
+}
+
+header .container{
+
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    position: relative; 
+
+}
+
+header .container  img {
+
+    width: 60px;
+}
+
+header .container nav {
+
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width:768px){
+
+    header .container nav{
+        justify-content: end;
+    }
+}
+
+header .container nav ul{
+
+    display: flex;
+   
+}
+
+@media (max-width:768px){
+
+    header .container nav ul{
+        display: none;
+    }
+}
+
+/* .nav-tog:hover  +ul{
+
+display: flex;
+flex-direction: column;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #ccc;
+width: 100%;
+transition: 0.3s;
+
+} */
+
+.nav-tog:hover {
+    color: var(--main-color);
+}
+
+.mobile-nav1{
+    
+display: flex  !important;
+flex-direction: column;
+position: absolute;
+background-color: #ccc;
+width: 100%;
+transition: 0.3s;
+}
+
+@media(min-width:768px){
+
+    .nav-tog{
+        display: none;
+    }
+
+}
+
+header .container nav ul li a {
+
+    
+    display: block;
+    padding: 20px 10px;
+    font-size: 16px;
+    font-weight: 700;
+    color: black;
+    transition: 0.3s;
+
+}
+
+@media(max-width:768px){
+
+    header .container nav ul li a{
+border-bottom: 1px solid rgb(32, 25, 25);
+    }
+}
+
+header .container nav ul li a.active,
+    header .container nav ul li a:hover{
+
+        color: wheat;
+        background-color: var(--main-color);
+    }
+
+    header .container  .social{
+
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    @media (max-width:768px){
+
+       header .container  .social{
+            display: none;
+        }
+    }
+
+    header  .container  .social i{
+
+        margin: 5px;
+        font-size: 17px;
+        display: flex;
+        width: 30px;
+        height: 30px;
+        background-color: var(--main-color);
+        justify-content: center;
+        align-items: center;
+        color: white;
+        border-radius: 50%;
+        transition: 0.3s;
+        cursor: pointer;
+
+    }
+
+    .container  .social i:hover{
+
+        background-color:black;
+        scale : 1.1;
+    }  
+
+/* End  Headwe style */
+/* <!-- START HERO SECTION*/
+.hero {
+
+    background-image: url(images/نمط\ نمط2.jpeg);
+}
+
+.hero .container{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width:768px){
+
+    .hero .container{
+        flex-direction: column-reverse;
+    }
+}
+
+.hero .container  .hero-img img {
+
+    width: 200px;
+
+}
+
+@media (max-width:768px){
+
+    .hero .container  .hero-img img{
+        width:250px ;
+    } 
+}
+
+.hero .container .hero-title{
+
+    color: var(--main-color);
+    font-size: 40px;
+    font-family: almarai;
+    font-weight: 800px;
+
+}
+
+.hero .container .hero-info h2{
+
+    color: black;
+    font-size: 30px;
+    margin-bottom: 20px;
+
+}
+
+.hero .container .hero-info p{
+
+    font-size: 18px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    width: 90%;
+
+}
+
+@media (max-width :768px){
+
+    .hero .container .hero-title{
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .hero .container .hero-info h2 {
+        font-size: 25px;
+    text-align: center;
+    }
+
+    .hero .container .hero-info p{
+        width: 100%;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+.hero .container .social{
+
+    display: flex;
+}
+
+.hero .container .social i{
+
+    margin: 5px;
+    font-size: 17px;
+    display: flex;
+    width: 35px;
+    height: 35px;
+    background-color: var(--main-color);
+    justify-content: center;
+    align-items: center;
+    color: wheat;
+    border-radius: 50%;
+    transition: 0.3s;
+    cursor: pointer;
+
+}
+
+@media(max-width:768px){
+
+    .hero .container .social{
+        justify-content: center;
+    }
+}
+
+.hero .container .hero-info  .call{
+
+display: flex ;
+justify-content: start;
+margin-top: 15px;
+
+}
+
+@media(max-width:768px){
+
+    .hero .container .hero-info  .call{
+        justify-content: center;
+    }
+}
+
+.hero .container .hero-info  .call button{
+
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px  20px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    transition: 0.3s;
+
+}
+
+.hero .container .hero-info  .call button:hover{
+
+    cursor: pointer;
+    background-color: black;
+    scale :1.1;
+
+} 
+/* <!-- END HERO SECTION   -->
+ /* START SERVICES SECTION   */
+  .services{
+
+    background-image:url("images/نمط\ نمط2.jpeg") ;
+    padding: 5px  0;
+
+ }
+
+ .setion-title{
+
+    text-align: center;
+    font-size: 40px;
+    color: var(--main-color);
+    margin-bottom: 20px;
+
+ }
+
+ .setion-desc {
+
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    margin-bottom: 20px;
+
+ }
+
+ .all-services{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill  , minmax(250px , 1fr));
+    gap: 10px;
+
+ }
+
+ .all-services .service{
+
+    background-color: rgb(240, 238, 235);
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 10px #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+
+ }
+
+ .all-services .service::before{
+
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    transition: 0.5s;
+    background-color: var(--main-color) ;
+
+ }
+
+ .all-services .service::after{
+
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 3px;
+    height: 0;
+    transition:0.5s ;
+    background-color: var(--main-color) ;
+
+ }
+
+ .all-services .service:hover::before{
+
+   height: 100%;
+
+ }
+
+ .all-services .service:hover::after{
+
+    height: 100%;
+
+ }
+
+  .all-services .service:hover{
+
+    transform: translate(-10px);
+
+  }
+
+ .all-services .service img{
+
+    width: 250px;
+    margin-bottom: 15px;
+
+ }
+
+ .all-services .service h3 {
+
+     margin-bottom: 15px;
+    color: var(--main-color);
+
+ }
+
+ .all-services .service p {
+
+    line-height: 1.5 ;
+    
+ } 
+  /* END SERVICES SECTION   */
+   /* START About us Section   */
+ .about-us{
+
+    padding: 50px  0;
+    background-image: url(images/نمط\ نمط2.jpeg);
+
+}
+
+.about-us .container{
+
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.about-info , 
+.about-img{
+
+    width: 50%;
+
+}
+
+@media(max-width : 768px){
+
+.about-us .container{
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.about-info , 
+.about-img{
+
+    width: 100%;
+
+   }
+}
+
+.about-us h2 {
+
+    color: var(--main-color);
+    margin-bottom: 20px ;
+    font-size: 30px;
+
+}
+
+.about-us p {
+
+    font-size: 17px;
+    line-height: 1.7;
+    width: 90%;
+    margin-bottom: 20px;
+
+}
+
+.about-us .container{
+
+    flex-direction: column;
+    text-align: center;
+
+}
+
+.about-info , 
+.about-img{
+
+    width: 100%;
+
+}
+
+.about-us p {
+
+    width: 100%;
+}
+
+.about-us .about-call{
+    margin-bottom: 20px;
+
+}
+
+.about-us .about-call{
+
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px  30px;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+
+}
+
+.about-us .about-call::before{
+
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: black;
+    transition: 0.5s;
+    z-index: -1;
+
+}
+
+.about-us .about-call::after{
+
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: black;
+    transition: 0.5s;
+    z-index: -1;
+
+}
+
+.about-us .about-call:hover::before{
+
+    width: 50%;
+
+}
+
+.about-us .about-call:hover::after{
+
+    width: 50%;
+
+}
+
+.about-us .about-img {
+
+    background-color: var(--main-color);
+}
+
+.about-us .about-img img {
+
+    transform: translate(-10px , -10px );
+    width: 100%;
+}
+
+@media (max-width:768px){
+    .about-us .about-img img {
+        transform: translate(0 , 0 ); 
+    } 
+}  
+    /* End About us Section   */
+     /* START Statistcs section   */
+     .Statistcs{
+
+        padding: 70px  0 ;
+        background-image: url(images/نمط\ نمط2.jpeg);
+        background-repeat:  no-repeat;
+        background-size:cover ;
+        background-attachment:fixed ;
+        position: relative;
+
+    }
+
+    .Statistcs  .overlay {
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(128, 124, 124, 0.527);
+
+    }
+
+    .Statistcs  .container {
+
+        display: grid;
+        grid-template-columns: repeat(auto-fill  , minmax(250px  , 1fr));
+        gap: 20px;
+
+    }
+
+    .Statistcs  .container .stat {
+
+        background-color: rgba(255, 255, 255, 0.637);
+        text-align: center;
+        padding: 20px  0;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: 0.3s;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        z-index: 1;
+
+    }
+
+    .Statistcs  .container .stat:hover{
+
+        scale: 1.05;
+        background-color: white;
+
+    }
+
+    .Statistcs  .container .stat h3 {
+
+        font-size: 35px;
+        margin-bottom: 15px;
+
+    }
+
+    .Statistcs  .container .stat  p {
+
+        font-size: 20px;
+        font-weight: 800;
+    }
+     /* End  Statistcs section   */
+     /* Start courses */
+.courses {
+
+    padding: 70px  0;
+    background-image:url(images/نمط\ نمط2.jpeg) ;
+
+}
+
+.courses  .all-courses{
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px  ,  1fr));
+    gap: 15px;
+
+} 
+
+.courses  .all-courses .course {
+
+    background-color: white;
+    padding-bottom: 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 0 0 10px #ccc;
+
+}
+
+.courses  .all-courses .course :hover{
+
+    transform: scale(1.03);
+
+}
+
+.courses  .all-courses .course img {
+
+    width: 100%;
+
+}
+
+.courses  .all-courses .course .course-title{
+
+color: var(--main-color);
+margin-top: 10px;
+margin-bottom: 10px;
+
+}
+
+.courses  .all-courses .course .course p{
+
+    color: rgb(78, 65, 65);
+    line-height:1.7;
+    margin-bottom: 25px;
+
+}
+
+.course-price {
+
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+}
+
+.course-price div :last-child {
+
+    color: var(--main-color);
+    font-weight: 700;
+    text-decoration: line-through;
+
+}
+
+.course-price :last-child {
+
+    font-size: 21px;
+    font-weight: 700;
+
+}
+
+hr {
+
+    width: 80%;
+    transform: translate(-10%);
+    margin-bottom: 15px;
+    border: none;
+    height: 1px;
+    background-color: var(--main-color);
+
+}
+
+.course-details {
+
+    background-color: var(--main-color);
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 10px  20px ;
+    margin-top: 10px;
+    width: 90%;
+    cursor: pointer;
+
+}
+
+.course-details:hover{
+
+    background-color: rgba(224, 54, 54, 0.89);
+
+}
+    /* End courses  */
+/* Start  portfolio  */
+.portfolio {
+
+    padding: 70px  0;
+    background-image: url(images/نمط\ نمط2.jpeg);
+
+}
+
+.portfolio  .portfolio-container {
+
+display: grid;
+/* توزع العناصر بشكل  متساوي  عرض الشاشة  */
+grid-template-columns: repeat(auto-fill  , minmax(250px , 1fr));
+/* مسافة بين العناصر  */
+gap: 15px;
+
+}
+
+.box  {
+    /* العناصر في المنتصف  */
+    text-align: center;
+    /* اعطاء  مسافة بين العناصر مع لون  */
+    border: 1px  solid #ccc;
+    position: relative;
+
+}
+
+.box  img {
+
+    /* خلي  الصورة تكون 100%  من عرض الاب  */
+    max-width: 100%;
+
+}
+
+  .portfolio-container  .box  .info  {
+   
+    background-color: rgb(255, 255, 255);
+    /* من  الاعلى والاسفلل  15  ومن اليمين واليسار   0 */
+    padding: 15px  0;
+    position: absolute;
+/* ياخد عرض الاب   */
+    width: 100%;
+    top: 0;
+    left:100%;
+    height: -100%;
+    display: flex;
+    /* خلي العناصر حد بعض  */
+    justify-content: center;
+    /* خلي العناصر بشكل عمودي  */
+    flex-direction: column;
+    transition: 0.5s ;
+
+  }
+
+  .portfolio-container  .box:hover  .info {
+
+    left: 0;
+
+  }
+
+  .portfolio-container  .box  .info h3 {
+
+    font-size: 25px;
+    color: var(--main-color);
+  margin-bottom: 10px;
+
+}
+
+.portfolio-container  .box  .info p {
+color: black;
+box-sizing: 30px;
+
+}
+
+.project-link {
+
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px  20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70%;
+    margin: auto;
+
+}
+/* end   portfolio  */
+/* start team section */
+
+.our-team {
+
+    background-image: url(images/نمط\ نمط2.jpeg);
+padding: 70px   0;
+
+}
+/* end team section */
+/* Start team section  */
+.our-team  {
+
+    background-image: url(images/نمط\ نمط2.jpeg);
+    padding: 70px  0;
+}
+
+.our-team  .team-container {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px , 1fr));
+    gap: 15px ;
+
+}
+
+.team-box {
+
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0  0  10px #990909;
+}
+
+.team-box:hover {
+     transform: translateY(-10px);
+}
+
+.team-box:hover  img {
+filter:grayscale(100%) ;
+
+}
+
+.img-social  {
+    display: flex;
+    justify-content: space-between;
+
+}
+ 
+.img-social   .social  {
+    padding-top: 10px;
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   margin-right: 5px;
+}
+
+.img-social   .social  i {
+    font-size: 20px;
+    margin: 4px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.img-social  img{
+ width: 80%;
+ border-radius: 0  0  15px ;
+
+}
+
+.team-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px ;
+
+}
+
+.team-info h3 {
+    padding: 5px 0;
+    color: var(--main-color);
+    margin: 15px;
+}
+
+/* End team section  */
+/* start  skills section */
+.our-skills {
+    padding: 70px  0;
+    background-image: url(images/نمط\ نمط2.jpeg);
+
+}
+
+.our-skills .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.skills-info ,
+.skills-img {
+    width: 45%;
+}
+
+@media (max-width:768px){
+    .our-skills .container {
+        flex-direction: column-reverse;
+    }
+    .skills-info ,
+.skills-img { 
+    width: 100%;
+}
+}
+.skills-img  img {
+    width: 100%;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.skills-img  img:hover {
+    filter: grayscale(100%);
+}
+
+.count {
+    display: flex;
+    justify-content: space-between;
+margin-bottom: 5px ;
+
+}
+
+ .count :last-child {
+
+    border: 1px solid rgb(199, 195, 195);
+    padding: 2px 3px;
+    border-radius: 2px;
+ }
+
+ .progress .prog {
+    width: 100%;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.219);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 13px;
+}
+
+.progress .prog span {
+    position: absolute;
+    width: 90%;
+    height: 100%;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.progress .prog span:hover {
+    width: 100%  !important;
+}
+/* End skills section */
+/* start  pricing section  */
+.pricing-setion {
+    padding: 70px  0;
+    background-image:url(images/نمط\ نمط2.jpeg);
+}
+
+.pricing-setion .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill  , minmax(250px  , 1fr));
+    gap: 15px;
+}
+
+.plan {
+    text-align: center;
+    background-color: rgba(155, 139, 139, 0.13);
+    padding-top: 25px;
+    padding-bottom: 25px ;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.plan:hover{
+    
+    scale: 1.05;
+}
+.plan:nth-child(1):before ,
+.plan:nth-child(3):before
+{
+    content: "  الاكتر مبيعا ";
+ color: white;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+    position: absolute;
+ width: 200px;
+ height: 40px;
+ background-color: rgb(4, 85, 54);
+ top: 15px;
+ left: -60px;
+ transform: rotate(-45deg);
+ z-index: -1;
+}
+
+.plan .plan-title {
+    font-size: 23px;
+    color: var(--main-color);
+    margin-top: 25px;
+}
+    .plan  img {
+        width: 20%;
+        border-radius: 10px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-top: 15px;
+    }
+.plan   .price  p:first-child {
+color: var(--main-color);
+font-size: 35px;
+font-weight: bold;
+}
+
+.plan   .price  p:last-child{
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plan   ul  {
+text-align: right;
+padding: 15px;
+
+}
+
+.plan   ul li {
+    padding:15px;
+    border-top: 1px solid  #eee;
+    cursor: pointer;
+    transition:  0.3s;
+    position: relative;
+    padding-right: 15px;
+}
+
+.plan   ul li::before {
+    position: absolute;
+    content: "\f04e";
+    font-family: "font awesome 5 free";
+    font-weight: 900;
+   color: var(--main-color);
+    top:50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+.plan   ul  li:hover {
+    background-color: var(--main-color);
+}
+
+.plan-btn {
+
+    background-color: var(--main-color);
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px  5px;
+    transition: 0.3s;
+}
+
+.plan-btn:hover{
+    scale: 1.05 ;
+}
+/* end pricing section  */
+/* start testimonials setion  */
+.testimonials {
+    padding: 70px  0;
+    background-image: url(images/نمط\ نمط2.jpeg);
+}
+
+.testimonials .container {
+display: grid;
+grid-template-columns: repeat(auto-fill  , minmax(350px  , 1fr));
+gap: 20px;
+}
+
+.testimonials .container .testimonial {
+    background-color: rgba(155, 139, 139, 0.13);
+    position: relative;
+    padding: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    
+}
+
+.testimonials .container .testimonial::before{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 3px;
+    height: 100%;
+    background-color: var(--main-color);
+transition: 0.3s;
+}
+
+.testimonials .container .testimonial::after{
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--main-color);
+    transition: 0.3s;
+}
+
+.testimonials .container .testimonial:hover::before{
+    height: 50%;
+}
+
+.testimonials .container .testimonial:hover::after{
+    width: 50%;
+}
+
+.testimonials .container .testimonial:hover{
+    transform: translateY(-5px);
+}
+
+.testimonials .container .testimonial  img {
+
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    left: 5px;
+    top: -20px;
+   border: 7px solid white;
+}
+
+.testimonials .container .testimonial h3 {
+    color: var(--main-color);
+    font-size: 23px;
+    margin-bottom: 10px;
+
+}
+
+.testimonials .container .testimonial .title-testimonial{
+  margin-bottom: 15px;
+
+}
+
+.testimonials .container .testimonial .stars .fill {
+    color: rgb(235, 235, 14);
+}
+
+.testimonial .review {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+/* end testimonials setion  */
+/* start footer setion  */
+footer {
+    padding: 70px  0;
+background-color: rgba(0, 0, 0, 0.753);
+/* background-image: url(images/نمط\ نمط2.jpeg); */
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill , minmax(250px  ,  1fr));
+    gap: 15px;
+}
+
+footer .container  .section h2 {
+    color: white;
+
+}
+
+
+@media (max-width:768px) {
+    footer .container  .section{
+        padding-right: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+footer .container  .section p {
+
+    color: white;
+    margin-top: 15px;
+    line-height: 1.8;
+    width: 90%;
+}
+
+footer .container  .section a {
+    color: white;
+    display: block;
+    margin-top: 15px;
+    transition: 0.3s;
+    position: relative;
+}
+
+footer .container  .section a::after{
+    content: "\f0d9";
+    font-family: "font awesome 5 free ";
+    font-weight: 900;
+    position: absolute;
+    color: var(--main-color);
+    top: 50%;
+    font-size: 20px;
+    right: -15px;
+    transform: translateY(-50%);
+}
+
+footer .container  .section a:hover{
+    color: var(--main-color);
+    padding-right: 5px;
+    font-weight: bold;
+}
+.letter  form {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.letter  form input[type = "text"] , 
+.letter  form input[type = "email"] {
+    height: 40px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    caret-color: var(--main-color);
+}
+
+.letter  form input[type = "text"]:focus , 
+.letter  form input[type = "email"]:focus{
+    outline: none;
+ 
+}
+
+.letter  form input[type = "submit"] {
+
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px   20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.letter  form input[type = "submit"]:hover{
+    background-color: black;
+    border: 1px  solid var(--main-color);
+
+}
+
+.hr-footer {
+    width: 70%;
+    margin-top: 35px;
+    transform: translateX(-15%);
+}
+
+.copyright {
+    text-align: center;
+    color: white;
+
+}
+/* end footer setion  */
+.btn-watsapp {
+    position: fixed;
+    bottom: 30px;
+    left:  30px;
+    background-color:#25D366;
+    color: white;
+    border-radius: 50%;
+    width: 60PX;
+    height: 60PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3S;
+    box-shadow: 0  0  4PX #EEE;
+
+}
+
+.btn-watsapp:hover{
+    scale: 1.1;
+}
+
+.btn-watsapp i {
+    font-size: 35px;
+}
